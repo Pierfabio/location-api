@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "6c134459-1d82-40d2-aad0-a83fc4cd4b19",
+		"name": "drei-location-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"name\" : \"mega-location1\",\n    \"lat\" : 18.9,\n    \"lng\" : 31.9,\n    \"type\" : \"premium\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/location",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find locations by type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/location?locationType=PREMIUM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location"
+					],
+					"query": [
+						{
+							"key": "locationType",
+							"value": "PREMIUM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find locations by aerea",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/location/search?p1=%7B\"lat\":10.9,\"lng\":10.9%7D&p2=%7B\"lat\":49.9,\"lng\":35.7%7D&limit=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location",
+						"search"
+					],
+					"query": [
+						{
+							"key": "locationType",
+							"value": "PREMIUM",
+							"disabled": true
+						},
+						{
+							"key": "p1",
+							"value": "%7B\"lat\":10.9,\"lng\":10.9%7D"
+						},
+						{
+							"key": "p2",
+							"value": "%7B\"lat\":49.9,\"lng\":35.7%7D"
+						},
+						{
+							"key": "limit",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
