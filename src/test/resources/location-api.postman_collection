@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6c134459-1d82-40d2-aad0-a83fc4cd4b19",
+		"_postman_id": "d30d4467-0187-4b6e-99ab-3a66773692fa",
 		"name": "drei-location-app",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -20,14 +20,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/location",
+					"raw": "http://localhost:8080/locations",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"location"
+						"locations"
 					]
 				}
 			},
@@ -39,14 +39,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/location?locationType=PREMIUM",
+					"raw": "http://localhost:8080/locations?locationType=PREMIUM",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"location"
+						"locations"
 					],
 					"query": [
 						{
@@ -64,14 +64,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/location/search?p1=%7B\"lat\":10.9,\"lng\":10.9%7D&p2=%7B\"lat\":49.9,\"lng\":35.7%7D&limit=6",
+					"raw": "http://localhost:8080/locations/search?p1=%7B\"lat\":10.9,\"lng\":10.9%7D&p2=%7B\"lat\":49.9,\"lng\":35.7%7D&limit=6",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"location",
+						"locations",
 						"search"
 					],
 					"query": [
