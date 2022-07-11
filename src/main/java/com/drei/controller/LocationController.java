@@ -17,7 +17,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("location")
+@RequestMapping("locations")
 public class LocationController {
 
     private final LocationService service;
